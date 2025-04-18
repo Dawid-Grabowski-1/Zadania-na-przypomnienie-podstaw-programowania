@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Wybierz kierunek konwersji (C/F): ");
+        string kierunek = Console.ReadLine().ToUpper();
+
+        Console.Write("Podaj temperature: ");
+        double temp = double.Parse(Console.ReadLine());
+
+        double wynik = 0;
+
+        if (kierunek == "C")
+        {
+            wynik = temp * 1.8 + 32;
+            Console.WriteLine($"Wynik: {wynik}F");
+        }
+        else if (kierunek == "F")
+        {
+            wynik = (temp - 32) / 1.8;
+            Console.WriteLine($"Wynik: {wynik}C");
+        }
+        else
+        {
+            Console.WriteLine("Nieprawidłowy wybór konwersji.");
+        }
+    }
+}
