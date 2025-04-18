@@ -1,0 +1,14 @@
+ile_ocen = int(input("Ile ocen chcesz wprowadzić? "))
+suma = 0
+
+for i in range(1, ile_ocen + 1):
+    ocena = float(input(f"Podaj ocenę {i}: "))
+    suma += ocena
+
+srednia = suma / ile_ocen
+print("Średnia:", srednia)
+
+if srednia >= 3.0:
+    print("Uczeń zdał.")
+else:
+    print("Uczeń nie zdał.")
