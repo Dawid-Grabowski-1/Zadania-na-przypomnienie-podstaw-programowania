@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Podaj pierwszą liczbę: ");
+        double liczba1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj drugą liczbę: ");
+        double liczba2 = double.Parse(Console.ReadLine());
+
+        Console.Write("Podaj działanie (+, -, * lub /): ");
+        string dzialanie = Console.ReadLine();
+
+        double wynik = 0;
+        bool poprawne = true;
+
+        if (dzialanie == "+")
+            wynik = liczba1 + liczba2;
+        else if (dzialanie == "-")
+            wynik = liczba1 - liczba2;
+        else if (dzialanie == "*")
+            wynik = liczba1 * liczba2;
+        else if (dzialanie == "/")
+        {
+            if (liczba2 != 0)
+                wynik = liczba1 / liczba2;
+            else
+            {
+                Console.WriteLine("Błąd: Dzielenie przez zero!");
+                poprawne = false;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nieznane działanie.");
+            poprawne = false;
+        }
+
+        if (poprawne)
+            Console.WriteLine("Wynik: " + wynik);
+    }
+}
