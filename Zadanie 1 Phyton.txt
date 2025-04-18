@@ -1,0 +1,21 @@
+liczba1 = float(input("Podaj pierwszą liczbę: "))
+liczba2 = float(input("Podaj drugą liczbę: "))
+dzialanie = input("Podaj działanie (+, -, * lub /): ")
+
+if dzialanie == "+":
+    wynik = liczba1 + liczba2
+    print("Wynik:", wynik)
+elif dzialanie == "-":
+    wynik = liczba1 - liczba2
+    print("Wynik:", wynik)
+elif dzialanie == "*":
+    wynik = liczba1 * liczba2
+    print("Wynik:", wynik)
+elif dzialanie == "/":
+    if liczba2 != 0:
+        wynik = liczba1 / liczba2
+        print("Wynik:", wynik)
+    else:
+        print("Błąd: Dzielenie przez zero!")
+else:
+    print("Nieznane działanie.")
